@@ -1,0 +1,4 @@
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.csprojAssemblyReference.cache
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.AssemblyInfo.cs
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.csproj.CoreCompileInputs.cache

@@ -10,6 +10,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using Estacionamento.BO;
+using Estacionamento.DAO;
+using Estacionamento.DAO.Repository;
 
 namespace Estacionamento.API
 {
@@ -26,6 +30,11 @@ namespace Estacionamento.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddDbContext<DbContextEstacionamento>(options => options.UseMySql(Configuration.GetConnectionString("DBPadraoMySql")));
+            
+            services.AddScoped<CarroRepository>();
+            services.AddScoped<CarroBO>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

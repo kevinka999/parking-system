@@ -1,0 +1,5 @@
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.csprojAssemblyReference.cache
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.AssemblyInfo.cs
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.MvcApplicationPartsAssemblyInfo.cache

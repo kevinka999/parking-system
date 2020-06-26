@@ -4,5 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Estacionamento.BO\Estacionamento.BO.csproj" />
+    <ProjectReference Include="..\Estacionamento.DAO\Estacionamento.DAO.csproj" />
+  </ItemGroup>
+
 
 </Project>
