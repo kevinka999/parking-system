@@ -2,19 +2,22 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Estacionamento.DAO.Models;
 
 namespace Estacionamento.DAO.Repository
 {
-    public class CarroRepository
+    public class VeiculoRepository
     {
         private DbContextEstacionamento _context;
-        public CarroRepository(DbContextEstacionamento context) {
+
+        public VeiculoRepository(DbContextEstacionamento context) 
+        {
             _context = context;
         }
 
-        public void AddCarro(Carro carro)
+        public void AddVeiculo(Veiculo veiculo)
         {
-            _context.Carro.Add(carro);
+            _context.Veiculo.Add(veiculo);
         }
     }
 }

@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Estacionamento.DAO.Models;
 
 namespace Estacionamento.DAO
 {
-    public class DbContextEstacionamento : Microsoft.EntityFrameworkCore.DbContext
+    public class DbContextEstacionamento : DbContext
     {
         public DbContextEstacionamento(DbContextOptions<DbContextEstacionamento> options) : base(options) { }
 
-        public DbSet<Carro> Carro { get; set; }
+        public DbSet<Models.Veiculo> Veiculo { get; set; }
+        public DbSet<Models.Estacionamento> Estacionamento  { get; set; }
+        public DbSet<Models.Preco> Preco { get; set; }
     }
 }

@@ -33,8 +33,13 @@ namespace Estacionamento.API
 
             services.AddDbContext<DbContextEstacionamento>(options => options.UseMySql(Configuration.GetConnectionString("DBPadraoMySql")));
             
-            services.AddScoped<CarroRepository>();
-            services.AddScoped<CarroBO>();
+            services.AddScoped<VeiculoRepository>();
+            services.AddScoped<EstacionamentoRepository>();
+            services.AddScoped<PrecoRepository>();
+
+            services.AddScoped<VeiculoBO>();
+            services.AddScoped<EstacionamentoBO>();
+            services.AddScoped<PrecoBO>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

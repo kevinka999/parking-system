@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.TEST\\Estacionamento.TEST.csproj": {}
+    "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.TEST\\Estacionamento.TEST.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.BO\\Estacionamento.BO.csproj": {
+    "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.BO\\Estacionamento.BO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.BO\\Estacionamento.BO.csproj",
+        "projectUniqueName": "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.BO\\Estacionamento.BO.csproj",
         "projectName": "Estacionamento.BO",
-        "projectPath": "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.BO\\Estacionamento.BO.csproj",
-        "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.BO\\obj\\",
+        "projectPath": "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.BO\\Estacionamento.BO.csproj",
+        "packagesPath": "C:\\Users\\Custom\\.nuget\\packages\\",
+        "outputPath": "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.BO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Custom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -27,8 +32,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.DAO\\Estacionamento.DAO.csproj": {
-                "projectPath": "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.DAO\\Estacionamento.DAO.csproj"
+              "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.DAO\\Estacionamento.DAO.csproj": {
+                "projectPath": "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.DAO\\Estacionamento.DAO.csproj"
               }
             }
           }
@@ -56,22 +61,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.DAO\\Estacionamento.DAO.csproj": {
+    "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.DAO\\Estacionamento.DAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.DAO\\Estacionamento.DAO.csproj",
+        "projectUniqueName": "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.DAO\\Estacionamento.DAO.csproj",
         "projectName": "Estacionamento.DAO",
-        "projectPath": "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.DAO\\Estacionamento.DAO.csproj",
-        "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.DAO\\obj\\",
+        "projectPath": "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.DAO\\Estacionamento.DAO.csproj",
+        "packagesPath": "C:\\Users\\Custom\\.nuget\\packages\\",
+        "outputPath": "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.DAO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Custom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -118,22 +128,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.TEST\\Estacionamento.TEST.csproj": {
+    "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.TEST\\Estacionamento.TEST.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.TEST\\Estacionamento.TEST.csproj",
+        "projectUniqueName": "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.TEST\\Estacionamento.TEST.csproj",
         "projectName": "Estacionamento.TEST",
-        "projectPath": "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.TEST\\Estacionamento.TEST.csproj",
-        "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.TEST\\obj\\",
+        "projectPath": "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.TEST\\Estacionamento.TEST.csproj",
+        "packagesPath": "C:\\Users\\Custom\\.nuget\\packages\\",
+        "outputPath": "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.TEST\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Custom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -145,8 +160,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.BO\\Estacionamento.BO.csproj": {
-                "projectPath": "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.BO\\Estacionamento.BO.csproj"
+              "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.BO\\Estacionamento.BO.csproj": {
+                "projectPath": "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.BO\\Estacionamento.BO.csproj"
               }
             }
           }
@@ -192,7 +207,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
