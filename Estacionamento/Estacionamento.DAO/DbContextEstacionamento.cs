@@ -7,8 +7,8 @@ namespace Estacionamento.DAO
     {
         public DbContextEstacionamento(DbContextOptions<DbContextEstacionamento> options) : base(options) { }
 
-        public DbSet<Models.Veiculo> Veiculo { get; set; }
-        public DbSet<Models.Estacionamento> Estacionamento  { get; set; }
-        public DbSet<Models.Preco> Preco { get; set; }
+        public DbSet<VeiculoModel> VeiculoModel { get; set; }
+        public DbSet<EstacionamentoModel> EstacionamentoModel  { get; set; }
+        public DbSet<PrecoModel> PrecoModel { get; set; }
     }
 }

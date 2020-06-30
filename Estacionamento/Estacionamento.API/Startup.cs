@@ -37,8 +37,8 @@ namespace Estacionamento.API
             services.AddScoped<EstacionamentoRepository>();
             services.AddScoped<PrecoRepository>();
 
-            services.AddScoped<VeiculoBO>();
             services.AddScoped<EstacionamentoBO>();
+            services.AddScoped<VeiculoBO>();
             services.AddScoped<PrecoBO>();
         }
 

@@ -2,3 +2,14 @@ C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\o
 C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.AssemblyInfoInputs.cache
 C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.AssemblyInfo.cs
 C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.csproj.CoreCompileInputs.cache
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.csprojAssemblyReference.cache
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.AssemblyInfoInputs.cache
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.AssemblyInfo.cs
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\bin\Debug\netcoreapp3.1\Estacionamento.BO.deps.json
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\bin\Debug\netcoreapp3.1\Estacionamento.BO.dll
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\bin\Debug\netcoreapp3.1\Estacionamento.BO.pdb
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\bin\Debug\netcoreapp3.1\Estacionamento.DAO.dll
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\bin\Debug\netcoreapp3.1\Estacionamento.DAO.pdb
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.csproj.CopyComplete
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.dll
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.pdb

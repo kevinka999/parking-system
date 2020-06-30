@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using Estacionamento.DAO.Repository;
 using Estacionamento.DAO.Models;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Estacionamento.BO
 {
@@ -10,14 +12,27 @@ namespace Estacionamento.BO
     {
         private VeiculoRepository _veiculoRepository;
 
-        public VeiculoBO(VeiculoRepository veiculoRepository) 
+        public VeiculoBO(VeiculoRepository veiculoRepository)
         {
             _veiculoRepository = veiculoRepository;
         }
 
-        public void AdicionarVeiculo (Veiculo veiculo)
+        public async Task<VeiculoModel> AdicionarVeiculo(string placaVeiculo)
         {
-            _veiculoRepository.AddVeiculo(veiculo);
+            VeiculoModel veiculo = new VeiculoModel() { Placa = placaVeiculo };
+            await _veiculoRepository.AddVeiculo(veiculo);
+
+            return veiculo;
+        }
+
+        public async Task<VeiculoModel> BuscarVeiculo(string placaVeiculo)
+        {
+            VeiculoModel veiculo = await _veiculoRepository.GetVeiculo(placaVeiculo);
+
+            if (veiculo == null)
+                veiculo = await AdicionarVeiculo(placaVeiculo);
+
+            return veiculo;
         }
     }
 }
