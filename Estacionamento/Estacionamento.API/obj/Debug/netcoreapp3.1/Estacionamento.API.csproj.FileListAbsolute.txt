@@ -6,7 +6,6 @@ C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.csprojAssemblyReference.cache
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\staticwebassets\Estacionamento.API.StaticWebAssets.Manifest.cache
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\staticwebassets\Estacionamento.API.StaticWebAssets.xml
-G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.MvcApplicationPartsAssemblyInfo.cache
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.AssemblyInfoInputs.cache
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.AssemblyInfo.cs
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
@@ -48,3 +47,9 @@ G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.csproj.CopyComplete
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.dll
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.pdb
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\bin\Debug\netcoreapp3.1\System.Web.Cors.dll
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\bin\Debug\netcoreapp3.1\System.Web.Http.Cors.dll
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.MvcApplicationPartsAssemblyInfo.cache

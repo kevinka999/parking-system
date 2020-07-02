@@ -1,9 +1,10 @@
 import React from 'react';
+import Routes from './routes.js';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hellow World!</h1>
+      <Routes />
     </div>
   );
 }
