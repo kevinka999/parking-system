@@ -12,3 +12,6 @@ G:\Kevin\Estacionamento\Estacionamento\Estacionamento.DAO\obj\Debug\netcoreapp3.
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.DAO\obj\Debug\netcoreapp3.1\Estacionamento.DAO.AssemblyInfo.cs
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.DAO\obj\Debug\netcoreapp3.1\Estacionamento.DAO.dll
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.DAO\obj\Debug\netcoreapp3.1\Estacionamento.DAO.pdb
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.DAO\bin\Debug\netcoreapp3.1\Estacionamento.DAO.pdb
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.DAO\obj\Debug\netcoreapp3.1\Estacionamento.DAO.dll
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.DAO\obj\Debug\netcoreapp3.1\Estacionamento.DAO.pdb

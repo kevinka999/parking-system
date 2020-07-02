@@ -2268,7 +2268,7 @@
       ]
     },
     "Microsoft.CSharp/4.5.0": {
-      "sha512": "EGoBmf3Na2ppbhPePDE9PlX81r1HuOZH5twBrq7couJZiPTjUnD3648balerQJO6EJ8Sj+43+XuRwQ7r+3tE3w==",
+      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
       "type": "package",
       "path": "microsoft.csharp/4.5.0",
       "files": [
@@ -2588,7 +2588,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/1.0.1": {
-      "sha512": "oq9B289GvIVAo9xfJFNBuuLiE55OopBcS3oZlSYyispEcCigEcs6X6CJM4lfQVXegTkx+o2Z6Xx9EYcpHPKGfA==",
+      "sha512": "2G6OjjJzwBfNOO8myRV/nFrbTw5iA+DEm0N+qUqhrOmaVtn4pC77h38I1jsXGw5VH55+dPfQsqHD0We9sCl9FQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.0.1",
       "files": [
@@ -2943,7 +2943,7 @@
       ]
     },
     "Newtonsoft.Json/11.0.2": {
-      "sha512": "znZGbws7E4BA9jxNZ7FuiIRI3C9hrgatVQSTKhIYZYNOud4M5VfGlTYi6RdYO5sQrebFuF/g9UEV3hOxDMXF6Q==",
+      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
       "type": "package",
       "path": "newtonsoft.json/11.0.2",
       "files": [
@@ -4641,7 +4641,7 @@
       ]
     },
     "System.Net.Http/4.1.0": {
-      "sha512": "QxY0x5iEkwaZqjPJC1EoWrjWnDPEcu7nf69tnfOx32BNb3V5cLvHwDOZDC0Vbx6MGGVOpnSHUtP0UY0lvtCvSg==",
+      "sha512": "ULq9g3SOPVuupt+Y3U+A37coXzdNisB1neFCSKzBwo182u0RDddKJF8I5+HfyXqK6OhJPgeoAwWXrbiUXuRDsg==",
       "type": "package",
       "path": "system.net.http/4.1.0",
       "files": [
@@ -7097,27 +7097,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Custom\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Kevin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.TEST\\Estacionamento.TEST.csproj",
+      "projectUniqueName": "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.TEST\\Estacionamento.TEST.csproj",
       "projectName": "Estacionamento.TEST",
-      "projectPath": "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.TEST\\Estacionamento.TEST.csproj",
-      "packagesPath": "C:\\Users\\Custom\\.nuget\\packages\\",
-      "outputPath": "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.TEST\\obj\\",
+      "projectPath": "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.TEST\\Estacionamento.TEST.csproj",
+      "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.TEST\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Custom\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -7129,8 +7122,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.BO\\Estacionamento.BO.csproj": {
-              "projectPath": "G:\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.BO\\Estacionamento.BO.csproj"
+            "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.BO\\Estacionamento.BO.csproj": {
+              "projectPath": "C:\\Users\\Kevin\\Documents\\Kevin\\Estacionamento\\Estacionamento\\Estacionamento.BO\\Estacionamento.BO.csproj"
             }
           }
         }
@@ -7176,7 +7169,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
