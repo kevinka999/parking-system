@@ -39,7 +39,9 @@ namespace Estacionamento.DAO.Repository
 
         public async Task<List<EstacionamentoModel>> GetAllEstacionamento()
         {
-            return await _context.EstacionamentoModel.ToListAsync();
+            return await _context.EstacionamentoModel.Include(x => x.Veiculo)
+                                                    .Include(x => x.Preco)
+                                                    .ToListAsync();
         }
     }
 }
