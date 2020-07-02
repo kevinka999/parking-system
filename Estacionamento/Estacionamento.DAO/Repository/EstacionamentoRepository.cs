@@ -41,6 +41,7 @@ namespace Estacionamento.DAO.Repository
         {
             return await _context.EstacionamentoModel.Include(x => x.Veiculo)
                                                     .Include(x => x.Preco)
+                                                    .OrderByDescending(x => x.DataEntrada)
                                                     .ToListAsync();
         }
     }

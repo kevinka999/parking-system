@@ -7,8 +7,8 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import IconButton from '@material-ui/core/IconButton';
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
 
 import api from '../../services/api';
 
@@ -29,38 +29,39 @@ export default function Estacionamento(){
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Placa Veiculo</TableCell>
-            <TableCell>Preco Inicial</TableCell>
-            <TableCell>Data Entrada</TableCell>
-            <TableCell>Data Saida</TableCell>
-            <TableCell>Valor a Pagar</TableCell>
-            <TableCell />
+            <TableCell align="center">Placa Veiculo</TableCell>
+            <TableCell align="center">Preco Inicial</TableCell>
+            <TableCell align="center">Data Entrada</TableCell>
+            <TableCell align="center">Data Saida</TableCell>
+            <TableCell align="center">Valor a Pagar</TableCell>
+            <TableCell/>
           </TableRow>
         </TableHead>
         <TableBody>
           {veiculosEstacionados.map((veiculo) => (
             <TableRow key={veiculo.id}>
-              <TableCell>{veiculo.veiculo.placa}</TableCell>
-              <TableCell>{veiculo.preco.valorInicial}</TableCell>
-              <TableCell>{veiculo.dataEntrada}</TableCell>
+              <TableCell align="center">{veiculo.veiculo.placa}</TableCell>
+              <TableCell align="center">{veiculo.preco.valorInicial}</TableCell>
+              <TableCell align="center">{veiculo.dataEntrada}</TableCell>
 
-              <TableCell>
+              <TableCell align="center">
                 {veiculo.valorPagar && (
                   veiculo.dataSaida
                 )}
               </TableCell>
 
-              <TableCell>
+              <TableCell align="center">
                 {veiculo.valorPagar && (
                   veiculo.valorPagar
                 )}
               </TableCell>
 
-              <TableCell>
+              <TableCell align="center">
                 {!veiculo.valorPagar && (
-                  <IconButton aria-label="Finalizar" color="primary">
-                    <CheckCircleIcon />
-                  </IconButton>
+                  <Button variant="contained" color="primary">
+                    <Icon>done</Icon>
+                    &nbsp;Finalizar
+                  </Button>
                 )}
               </TableCell>
             </TableRow>
