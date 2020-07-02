@@ -7,6 +7,8 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import IconButton from '@material-ui/core/IconButton';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 
 import api from '../../services/api';
 
@@ -18,9 +20,10 @@ export default function Estacionamento(){
     async function fetch() {
       await api.get('Estacionamento/Index').then(({data}) => setVeiculosEstacionados(data))
     }
+
     fetch()
   }, [])
- 
+
   return (
     <TableContainer component={Paper}>
       <Table>
@@ -31,6 +34,7 @@ export default function Estacionamento(){
             <TableCell>Data Entrada</TableCell>
             <TableCell>Data Saida</TableCell>
             <TableCell>Valor a Pagar</TableCell>
+            <TableCell />
           </TableRow>
         </TableHead>
         <TableBody>
@@ -39,8 +43,26 @@ export default function Estacionamento(){
               <TableCell>{veiculo.veiculo.placa}</TableCell>
               <TableCell>{veiculo.preco.valorInicial}</TableCell>
               <TableCell>{veiculo.dataEntrada}</TableCell>
-              <TableCell>{veiculo.dataSaida}</TableCell>
-              <TableCell>{veiculo.valorPagar}</TableCell>
+
+              <TableCell>
+                {veiculo.valorPagar && (
+                  veiculo.dataSaida
+                )}
+              </TableCell>
+
+              <TableCell>
+                {veiculo.valorPagar && (
+                  veiculo.valorPagar
+                )}
+              </TableCell>
+
+              <TableCell>
+                {!veiculo.valorPagar && (
+                  <IconButton aria-label="Finalizar" color="primary">
+                    <CheckCircleIcon />
+                  </IconButton>
+                )}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
