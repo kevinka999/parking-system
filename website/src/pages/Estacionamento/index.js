@@ -1,4 +1,7 @@
 import React, {useState, useEffect} from 'react';
+import {format} from 'date-fns'
+
+import api from '../../services/api';
 
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -10,19 +13,23 @@ import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 
-import api from '../../services/api';
-
 export default function Estacionamento(){
-
   const [veiculosEstacionados, setVeiculosEstacionados] = useState([]);
 
   useEffect(() => {
     async function fetch() {
       await api.get('Estacionamento/Index').then(({data}) => setVeiculosEstacionados(data))
     }
-
     fetch()
   }, [])
+
+  async function handleFinalizarEstacionamento(idEstacionamento){
+    try{
+        await api.post('/Estacionamento/Encerrar/', {idEstacionamento}).then(({data}) => setVeiculosEstacionados(data))
+    } catch(error) {
+        alert("Houve um problema ao finalizar!");
+    }
+  }
 
   return (
     <TableContainer component={Paper}>
@@ -38,27 +45,28 @@ export default function Estacionamento(){
           </TableRow>
         </TableHead>
         <TableBody>
-          {veiculosEstacionados.map((veiculo) => (
-            <TableRow key={veiculo.id}>
-              <TableCell align="center">{veiculo.veiculo.placa}</TableCell>
-              <TableCell align="center">{veiculo.preco.valorInicial}</TableCell>
-              <TableCell align="center">{veiculo.dataEntrada}</TableCell>
-
+          {veiculosEstacionados.map((estacionado) => (
+            <TableRow key={estacionado.id}>
+              <TableCell align="center">{estacionado.veiculo.placa}</TableCell>
+              <TableCell align="center">R${estacionado.preco.valorInicial}</TableCell>
+              <TableCell align="center">{format(new Date(estacionado.dataEntrada), 'dd/MM/yyyy HH:mm')}</TableCell>
               <TableCell align="center">
-                {veiculo.valorPagar && (
-                  veiculo.dataSaida
+                {estacionado.valorPagar !== 0 && (
+                  format(new Date(estacionado.dataSaida), 'dd/MM/yyyy HH:mm')
                 )}
               </TableCell>
-
               <TableCell align="center">
-                {veiculo.valorPagar && (
-                  veiculo.valorPagar
+                {estacionado.valorPagar !== 0 && (
+                  `R$${estacionado.valorPagar}`
                 )}
               </TableCell>
-
               <TableCell align="center">
-                {!veiculo.valorPagar && (
-                  <Button variant="contained" color="primary">
+                {!estacionado.valorPagar && (
+                  <Button 
+                    variant="contained"
+                    color="primary"
+                    onClick={() => handleFinalizarEstacionamento(estacionado.id)}
+                  >
                     <Icon>done</Icon>
                     &nbsp;Finalizar
                   </Button>

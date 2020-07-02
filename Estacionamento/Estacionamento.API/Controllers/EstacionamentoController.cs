@@ -38,10 +38,10 @@ namespace Estacionamento.API.Controllers
 
         [HttpPost]
         [Route("Encerrar")]
-        public async Task<Double> Encerrar(int idEstacionamento)
+        public async Task<List<EstacionamentoModel>> Encerrar(int idEstacionamento)
         {
-            Double PrecoPagar = await _estacionamentoBO.EncerrarEstacionamento(idEstacionamento);
-            return PrecoPagar;
+            await _estacionamentoBO.EncerrarEstacionamento(idEstacionamento);
+            return await _estacionamentoBO.BuscarEstacionamentos();
         }
     }
 }
