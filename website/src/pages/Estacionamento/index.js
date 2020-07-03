@@ -11,7 +11,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
-import Icon from '@material-ui/core/Icon';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 
 export default function Estacionamento(){
   const [veiculosEstacionados, setVeiculosEstacionados] = useState([]);
@@ -67,7 +67,7 @@ export default function Estacionamento(){
                     color="primary"
                     onClick={() => handleFinalizarEstacionamento(estacionado.id)}
                   >
-                    <Icon>done</Icon>
+                    <CheckCircleIcon />
                     &nbsp;Finalizar
                   </Button>
                 )}
