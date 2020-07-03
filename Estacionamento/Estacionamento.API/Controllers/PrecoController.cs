@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Estacionamento.API.DTO;
 using Estacionamento.BO;
 using Estacionamento.DAO.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -26,36 +27,36 @@ namespace Estacionamento.API.Controllers
         }
 
         [Route("Adicionar")]
-        public async Task Adicionar(Double valorInicial, DateTime dataInicial, DateTime dataFinal)
+        public async Task Adicionar(PrecoDTO precoRequest)
         {
             PrecoModel preco = new PrecoModel
             {
-                ValorInicial = valorInicial,
-                DataInicial = dataInicial,
-                DataFinal = dataFinal
+                ValorInicial = precoRequest. valorInicial,
+                DataInicial = precoRequest.dataInicial,
+                DataFinal = precoRequest.dataFinal
             };
 
             await _precoBO.InserirPreco(preco);
         }
 
         [Route("Atualizar")]
-        public async Task Atualizar(int idPreco, Double valorInicial, DateTime dataInicial, DateTime dataFinal)
+        public async Task Atualizar(PrecoDTO precoRequest)
         {
             PrecoModel preco = new PrecoModel
             {
-                Id = idPreco,
-                ValorInicial = valorInicial,
-                DataInicial = dataInicial,
-                DataFinal = dataFinal
+                Id = precoRequest.idPreco,
+                ValorInicial = precoRequest.valorInicial,
+                DataInicial = precoRequest.dataInicial,
+                DataFinal = precoRequest.dataFinal
             };
 
             await _precoBO.AtualizarPreco(preco);
         }
 
         [Route("Excluir")]
-        public async Task Excluir(int idPreco)
+        public async Task Excluir(PrecoDTO precoRequest)
         {
-            await _precoBO.ExcluirPreco(idPreco);
+            await _precoBO.ExcluirPreco(precoRequest.idPreco);
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Estacionamento.API.DTO;
 using Estacionamento.BO;
 using Estacionamento.DAO.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -28,19 +29,19 @@ namespace Estacionamento.API.Controllers
 
         [HttpPost]
         [Route("Adicionar")]
-        public async Task Adicionar(string placaVeiculo)
+        public async Task Adicionar(EstacionamentoDTO estacionamentoRequest)
         {
             int numeroTotalCaracteresPlaca = 9;
 
-            if (placaVeiculo.Length == numeroTotalCaracteresPlaca)
-                await _estacionamentoBO.InserirEstacionamento(placaVeiculo);
+            if (estacionamentoRequest.placaVeiculo.Length == numeroTotalCaracteresPlaca)
+                await _estacionamentoBO.InserirEstacionamento(estacionamentoRequest.placaVeiculo);
         }
 
         [HttpPost]
         [Route("Encerrar")]
-        public async Task<List<EstacionamentoModel>> Encerrar(int idEstacionamento)
+        public async Task<List<EstacionamentoModel>> Encerrar(EstacionamentoDTO estacionamentoRequest)
         {
-            await _estacionamentoBO.EncerrarEstacionamento(idEstacionamento);
+            await _estacionamentoBO.EncerrarEstacionamento(estacionamentoRequest.idEstacionamento) ;
             return await _estacionamentoBO.BuscarEstacionamentos();
         }
     }

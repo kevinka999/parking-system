@@ -37,7 +37,7 @@ namespace Estacionamento.BO
             await _estacionamentoRepository.AddEstacionamento(estacionamento);
         }
 
-        public async Task<double> EncerrarEstacionamento(int idEstacionamento)
+        public async Task EncerrarEstacionamento(int idEstacionamento)
         {
             EstacionamentoModel estacionamento = await _estacionamentoRepository.GetEstacionamento(idEstacionamento);
 
@@ -49,8 +49,6 @@ namespace Estacionamento.BO
             estacionamento.ValorPagar = valorPagar;
 
             await _estacionamentoRepository.UpdateEstacionamento(estacionamento);
-
-            return estacionamento.ValorPagar;
         }
 
         public async Task<List<EstacionamentoModel>> BuscarEstacionamentos()
@@ -62,7 +60,7 @@ namespace Estacionamento.BO
         {
             Double valorPagar;
 
-            TimeSpan duracaoEstacionamento = estacionamento.DataEntrada.Subtract(estacionamento.DataSaida);
+            TimeSpan duracaoEstacionamento = estacionamento.DataSaida.Subtract(estacionamento.DataEntrada);
             int duracaoTotalMinutos = Convert.ToInt32(Math.Round(duracaoEstacionamento.TotalMinutes));
 
             if (duracaoTotalMinutos > 60)
