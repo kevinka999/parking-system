@@ -39,10 +39,9 @@ namespace Estacionamento.API.Controllers
 
         [HttpPost]
         [Route("Encerrar")]
-        public async Task<List<EstacionamentoModel>> Encerrar(EstacionamentoDTO estacionamentoRequest)
+        public async Task Encerrar(EstacionamentoDTO estacionamentoRequest)
         {
-            await _estacionamentoBO.EncerrarEstacionamento(estacionamentoRequest.idEstacionamento) ;
-            return await _estacionamentoBO.BuscarEstacionamentos();
+            await _estacionamentoBO.EncerrarEstacionamento(estacionamentoRequest.idEstacionamento);
         }
     }
 }

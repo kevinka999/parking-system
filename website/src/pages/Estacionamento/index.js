@@ -21,11 +21,11 @@ export default function Estacionamento(){
       await api.get('Estacionamento/Index').then(({data}) => setVeiculosEstacionados(data))
     }
     fetch()
-  }, [])
+  }, [handleFinalizarEstacionamento])
 
   async function handleFinalizarEstacionamento(idEstacionamento){
     try{
-        await api.post('/Estacionamento/Encerrar/', {idEstacionamento}).then(({data}) => setVeiculosEstacionados(data))
+        await api.post('/Estacionamento/Encerrar/', {idEstacionamento})
     } catch(error) {
         alert("Houve um problema ao finalizar!");
     }
