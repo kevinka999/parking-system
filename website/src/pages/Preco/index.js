@@ -1,0 +1,30 @@
+import React, {useState, useEffect, useCallback} from 'react';
+
+import api from '../../services/api';
+
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+
+export default function Preco(){
+  return (
+    <TableContainer component={Paper}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell/>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+            <TableRow>
+                <TableCell></TableCell>
+            </TableRow>
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+};

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useCallback} from 'react';
 import {useHistory} from 'react-router-dom';
 
 import './style.css';
@@ -9,15 +9,27 @@ import DirectionsCarIcon from '@material-ui/icons/DirectionsCar';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 
 
-export default function navMenu() {
+export default function NavMenu() {
+  const history = useHistory();
+  const [valorPagina, setValorPagina] = useState("/Estacionamento");
+
+  const handleTrocarPagina = useCallback(async (caminho) => {
+    console.log(caminho)
+    history.push(caminho)
+  }, [valorPagina]);
 
   return (
     <BottomNavigation
+      value={valorPagina}
+      onChange={(event, value) => {
+        console.log(`mudou para ${value}`)
+        setValorPagina(value);
+      }}
       showLabels
       className="navMenu"
     >
-      <BottomNavigationAction label="Estacionamento" icon={<DirectionsCarIcon />} />
-      <BottomNavigationAction label="Preços" icon={<LocalOfferIcon />} />
+      <BottomNavigationAction value="/Estacionamento" label="Estacionamento" icon={<DirectionsCarIcon />} />
+      <BottomNavigationAction value="/Preco" label="Preços" icon={<LocalOfferIcon />} />
     </BottomNavigation>
   );
 }
