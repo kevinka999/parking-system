@@ -11,8 +11,7 @@ import Menu from './pages/Menu/index.js';
 function App() {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
-  const theme = React.useMemo(
-    () =>
+  const theme = React.useMemo(() =>
       createMuiTheme({
         palette: {
           type: prefersDarkMode ? 'dark' : 'light',

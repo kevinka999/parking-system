@@ -10,7 +10,7 @@ import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 
 
 export default function navMenu() {
-  
+
   return (
     <BottomNavigation
       showLabels
