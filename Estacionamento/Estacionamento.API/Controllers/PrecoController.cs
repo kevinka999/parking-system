@@ -6,6 +6,7 @@ using Estacionamento.BO;
 using Estacionamento.DAO.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Estacionamento.BO.Interfaces;
 
 namespace Estacionamento.API.Controllers
 {
@@ -13,9 +14,9 @@ namespace Estacionamento.API.Controllers
     [Route("Preco")]
     public class PrecoController
     {
-        private PrecoBO _precoBO;
+        private IPrecoBO _precoBO;
 
-        public PrecoController(PrecoBO precoBO)
+        public PrecoController(IPrecoBO precoBO)
         {
             _precoBO = precoBO;
         }

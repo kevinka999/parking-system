@@ -50,8 +50,6 @@ namespace Estacionamento.TEST
 
             await _estacionamentoBO.InserirEstacionamento(placaVeiculo);
 
-            var a = 1;
-
             await _estacionamentoRepository.Received(1)
                                             .AddEstacionamento(Arg.Is<EstacionamentoModel>(
                                                 x => x.VeiculoId == 1 &&

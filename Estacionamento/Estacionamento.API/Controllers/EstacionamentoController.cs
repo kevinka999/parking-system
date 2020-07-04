@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Estacionamento.API.DTO;
 using Estacionamento.BO;
+using Estacionamento.BO.Interfaces;
 using Estacionamento.DAO.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,9 +14,9 @@ namespace Estacionamento.API.Controllers
     [Route("Estacionamento")]
     public class EstacionamentoController
     {
-        private EstacionamentoBO _estacionamentoBO;
+        private IEstacionamentoBO _estacionamentoBO;
 
-        public EstacionamentoController(EstacionamentoBO estacionamentoBO) 
+        public EstacionamentoController(IEstacionamentoBO estacionamentoBO) 
         {
             _estacionamentoBO = estacionamentoBO;
         }

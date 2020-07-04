@@ -1,19 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Estacionamento.BO;
+using Estacionamento.BO.Interfaces;
 using Estacionamento.DAO;
 using Estacionamento.DAO.Repository;
+using Estacionamento.DAO.Repository.Interfaces;
 
 namespace Estacionamento.API
 {
@@ -33,13 +28,13 @@ namespace Estacionamento.API
 
             services.AddDbContext<DbContextEstacionamento>(options => options.UseMySql(Configuration.GetConnectionString("DBPadraoMySql")));
             
-            services.AddScoped<VeiculoRepository>();
-            services.AddScoped<EstacionamentoRepository>();
-            services.AddScoped<PrecoRepository>();
+            services.AddScoped<IVeiculoRepository, VeiculoRepository>();
+            services.AddScoped<IEstacionamentoRepository, EstacionamentoRepository>();
+            services.AddScoped<IPrecoRepository, PrecoRepository>();
 
-            services.AddScoped<EstacionamentoBO>();
-            services.AddScoped<VeiculoBO>();
-            services.AddScoped<PrecoBO>();
+            services.AddScoped<IEstacionamentoBO, EstacionamentoBO>();
+            services.AddScoped<IVeiculoBO, VeiculoBO>();
+            services.AddScoped<IPrecoBO, PrecoBO>();
 
             services.AddCors(x => x.AddPolicy("MyPolicy", builder =>
             {
