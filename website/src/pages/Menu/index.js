@@ -1,14 +1,39 @@
-import React from 'react';
-import NavMenu from './navMenu.js';
-import Routes from '../../routes.js'
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 
+import ImagemMenu from '../../assets/imagemMenu.png';
 import './style.css';
 
-export default function Menu(){
-    return (
-        <div className="menuContent">
-            <NavMenu />
-            <Routes />
-        </div>
-    )
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import DirectionsCarIcon from '@material-ui/icons/DirectionsCar';
+import LocalOfferIcon from '@material-ui/icons/LocalOffer';
+
+
+export default function NavMenu() {
+  const [valorPagina, setValorPagina] = useState("/Estacionamento");
+
+  const ImagemCabecalho = () => {
+    return(
+      <img src={ImagemMenu} className="imagemMenu" alt="Estacionamento"/>
+    );
+  }
+
+  return (
+    <div className="menuContent">
+      <ImagemCabecalho />
+
+      <BottomNavigation
+        value={valorPagina}
+        onChange={(event, value) => {
+          setValorPagina(value);
+        }}
+        showLabels
+        className="navMenu"
+      >
+        <BottomNavigationAction value="/Estacionamento" label="Estacionamento" icon={<DirectionsCarIcon />} component={Link} to="/Estacionamento" />
+        <BottomNavigationAction value="/Preco" label="Preços" icon={<LocalOfferIcon />} component={Link} to="/Preco" />
+      </BottomNavigation>
+    </div>
+  );
 }

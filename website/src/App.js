@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from './pages/Menu';
+import Routes from './routes';
 import "./global.css";
 
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -23,7 +23,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline/>
       <Container maxWidth="md">
-        <Menu />
+        <Routes />
       </Container>
     </ThemeProvider>
   );

@@ -1,6 +1,8 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
 
+import Menu from './pages/Menu';
+
 import Estacionamento from './pages/Estacionamento';
 import NovoEstacionamento from './pages/NovoEstacionamento'
 import Preco from './pages/Preco';
@@ -9,6 +11,8 @@ import NovoPreco from './pages/NovoPreco'
 export default function Routes(){
     return(
         <BrowserRouter>
+            <Menu />
+            
             <Switch>
                 <Redirect exact from="/" to="/Estacionamento" />
 
