@@ -1,6 +1,4 @@
-import React, {useState, useEffect, useCallback} from 'react';
-
-import api from '../../services/api';
+import React from 'react';
 
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';

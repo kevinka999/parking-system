@@ -1,5 +1,5 @@
 import React, {useState, useCallback} from 'react';
-import {useHistory} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 import ImagemMenu from '../../assets/imagemMenu.png';
 import './style.css';
@@ -11,15 +11,15 @@ import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 
 
 export default function NavMenu() {
-  const history = useHistory();
+  //const history = useHistory();
   const [valorPagina, setValorPagina] = useState("/Estacionamento");
 
-  const handleTrocarPagina = useCallback(async (caminho) => {
-    console.log(caminho)
-    history.push(caminho)
-  }, [valorPagina]);
+  // const handleTrocarPagina = useCallback((caminho) => {
+  //   setValorPagina(caminho);
+  //   history.push(caminho)
+  // }, [history]);
 
-  function ImagemCabecalho(){
+  const ImagemCabecalho = () => {
     return(
       <img src={ImagemMenu} className="imagemMenu" alt="Estacionamento"/>
     );
@@ -28,16 +28,18 @@ export default function NavMenu() {
   return (
     <>
       <ImagemCabecalho />
+
       <BottomNavigation
         value={valorPagina}
-        onChange={(event, value) => {
-          console.log(`mudou para ${value}`)
-          setValorPagina(value);
-        }}
+        // onChange={(event, value) => {
+        //   handleTrocarPagina(value);
+        // }}
         showLabels
         className="navMenu"
       >
-        <BottomNavigationAction value="/Estacionamento" label="Estacionamento" icon={<DirectionsCarIcon />} />
+        <Link to="/Estacionamento">
+          <BottomNavigationAction value="/Estacionamento" label="Estacionamento" icon={<DirectionsCarIcon />} />
+        </Link>
         <BottomNavigationAction value="/Preco" label="Preços" icon={<LocalOfferIcon />} />
       </BottomNavigation>
     </>
