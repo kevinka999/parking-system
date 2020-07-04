@@ -1,0 +1,18 @@
+.formulario{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.campoFormulario{
+    width: 50%;
+    height: auto;
+}
+
+.botaoFormulario{
+    margin: 10px;
+}
+
+.botaoFormulario > * {
+    margin: 100px;
+}

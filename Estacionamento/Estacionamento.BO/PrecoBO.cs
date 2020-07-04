@@ -1,23 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Estacionamento.DAO.Repository;
+using Estacionamento.DAO.Repository.Interfaces;
 using Estacionamento.DAO.Models;
 using System.Linq;
 using System.Threading.Tasks;
+using Estacionamento.BO.Interfaces;
 
 namespace Estacionamento.BO
 {
-    public class PrecoBO
+    public class PrecoBO : IPrecoBO
     {
-        private PrecoRepository _precoRepository;
+        private IPrecoRepository _precoRepository;
 
-        public PrecoBO(PrecoRepository precoRepository)
+        public PrecoBO(IPrecoRepository precoRepository)
         {
             _precoRepository = precoRepository;
         }
 
-        public async Task InserirPreco(PrecoModel preco) 
+        public async Task InserirPreco(PrecoModel preco)
         {
             await _precoRepository.AddPreco(preco);
         }

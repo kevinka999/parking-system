@@ -1,12 +1,11 @@
 import React from 'react';
-import Routes from './routes.js';
+import Menu from './pages/Menu';
 import "./global.css";
 
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Container from '@material-ui/core/Container';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Menu from './pages/Menu/index.js';
 
 function App() {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -25,7 +24,6 @@ function App() {
       <CssBaseline/>
       <Container maxWidth="md">
         <Menu />
-        <Routes />
       </Container>
     </ThemeProvider>
   );

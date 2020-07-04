@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Estacionamento.DAO.Repository;
 using Estacionamento.DAO.Models;
+using Estacionamento.DAO.Repository.Interfaces;
+using Estacionamento.BO.Interfaces;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Estacionamento.BO
 {
-    public class EstacionamentoBO
+    public class EstacionamentoBO : IEstacionamentoBO
     {
-        private EstacionamentoRepository _estacionamentoRepository;
-        private PrecoBO _precoBO;
-        private VeiculoBO _veiculoBO;
+        private IEstacionamentoRepository _estacionamentoRepository;
+        private IPrecoBO _precoBO;
+        private IVeiculoBO _veiculoBO;
 
-        public EstacionamentoBO(EstacionamentoRepository estacionamentoRepository, PrecoBO precoBO, VeiculoBO veiculoBO) 
+        public EstacionamentoBO(IEstacionamentoRepository estacionamentoRepository, IPrecoBO precoBO, IVeiculoBO veiculoBO) 
         {
             _estacionamentoRepository = estacionamentoRepository;
             _precoBO = precoBO;

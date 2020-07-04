@@ -1,0 +1,10 @@
+.formNovoEstacionamento{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.fieldNovoEstacionamento{
+    width: 50%;
+    height: auto;
+}

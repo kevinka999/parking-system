@@ -7,10 +7,11 @@ using System.Web;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Estacionamento.DAO.Models;
+using Estacionamento.DAO.Repository.Interfaces;
 
 namespace Estacionamento.DAO.Repository
 {
-    public class PrecoRepository
+    public class PrecoRepository : IPrecoRepository
     {
         private DbContextEstacionamento _context;
 

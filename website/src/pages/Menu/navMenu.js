@@ -1,6 +1,7 @@
 import React, {useState, useCallback} from 'react';
 import {useHistory} from 'react-router-dom';
 
+import ImagemMenu from '../../assets/imagemMenu.png';
 import './style.css';
 
 import BottomNavigation from '@material-ui/core/BottomNavigation';
@@ -18,18 +19,27 @@ export default function NavMenu() {
     history.push(caminho)
   }, [valorPagina]);
 
+  function ImagemCabecalho(){
+    return(
+      <img src={ImagemMenu} className="imagemMenu" alt="Estacionamento"/>
+    );
+  }
+
   return (
-    <BottomNavigation
-      value={valorPagina}
-      onChange={(event, value) => {
-        console.log(`mudou para ${value}`)
-        setValorPagina(value);
-      }}
-      showLabels
-      className="navMenu"
-    >
-      <BottomNavigationAction value="/Estacionamento" label="Estacionamento" icon={<DirectionsCarIcon />} />
-      <BottomNavigationAction value="/Preco" label="Preços" icon={<LocalOfferIcon />} />
-    </BottomNavigation>
+    <>
+      <ImagemCabecalho />
+      <BottomNavigation
+        value={valorPagina}
+        onChange={(event, value) => {
+          console.log(`mudou para ${value}`)
+          setValorPagina(value);
+        }}
+        showLabels
+        className="navMenu"
+      >
+        <BottomNavigationAction value="/Estacionamento" label="Estacionamento" icon={<DirectionsCarIcon />} />
+        <BottomNavigationAction value="/Preco" label="Preços" icon={<LocalOfferIcon />} />
+      </BottomNavigation>
+    </>
   );
 }

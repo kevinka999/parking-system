@@ -34,8 +34,6 @@ export default function Estacionamento(){
     fetch()
   }, [handleFinalizarEstacionamento])
 
-  
-
   return (
     <TableContainer component={Paper}>
       <Table>
