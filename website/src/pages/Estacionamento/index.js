@@ -1,79 +1,33 @@
 import React, {useState, useEffect, useCallback} from 'react';
+import DialogNovoEstacionamento from './NovoEstacionamento';
 import api from '../../services/api';
 
-import {format} from 'date-fns'
-import {TableContainer, Table, TableHead, TableBody, TableCell, TableRow} from '@material-ui/core';
-import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from '@material-ui/core';
-import {Paper, Button, TextField, Fab} from '@material-ui/core';
-
+import {format} from 'date-fns';
+import Alert from '@material-ui/lab/Alert';
+import {TableContainer, Table, TableHead, TableBody, TableCell, TableRow, Paper, Button, Fab} from '@material-ui/core';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import AddIcon from '@material-ui/icons/Add';
 
 export default function Estacionamento(){
   const [veiculosEstacionados, setVeiculosEstacionados] = useState([]);
-  const [dialogEstacionamento, setDialogEstacionamento] = useState(false);
-  const [placaVeiculo, setPlacaVeiculo] = useState("");
-
-  const handleDialogEstacionamento = () => setDialogEstacionamento(true);
-  const handleFecharDialogEstacionamento = () => setDialogEstacionamento(false);
-
-  const handleAlterarPlacaVeiculo = (e) => {
-    setPlacaVeiculo(e.target.value);
-  }
+  const [dialogAberto, setDialogAberto] = useState(false);
+  const [adicionadoSucesso, setAdicionadoSucesso] = useState(false);
 
   const handleFinalizarEstacionamento = useCallback(async (idEstacionamento) => {
     try{
-      await api.post('/Estacionamento/Encerrar/', {idEstacionamento}).then(setDialogEstacionamento(false));
+      await api.post('/Estacionamento/Encerrar/', {idEstacionamento});
     } catch(error) {
         alert("Houve um problema ao finalizar!");
     }
   }, []) 
 
-  const handleAdicionarEstacionamento = useCallback(async (placaAdicionar) => {
-    try{
-      await api.post('/Estacionamento/Adicionar/', {'placaVeiculo': placaAdicionar})
-    } catch(error) {
-      alert("Houve um problema ao adicionar!");
-    }
-  }, []);
-
   useEffect(() => {
     async function fetch() {
       await api.get('Estacionamento/Index').then(({data}) => setVeiculosEstacionados(data))
     }
-    fetch()
-  }, [handleFinalizarEstacionamento, handleAdicionarEstacionamento])
 
-  const DialogNovoEstacionamento = () => {
-    return (
-      <Dialog open={dialogEstacionamento} onClose={handleFecharDialogEstacionamento} aria-labelledby="idDialogTitle">
-        <DialogTitle id="idDialogTitle">Adicionar Estacionamento</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            Escreva a placa do veiculo a ser estacionado.
-          </DialogContentText>
-          <TextField 
-            id="btnPlacaVeiculo" 
-            variant="outlined" 
-            label="Placa Veiculo"
-            margin="dense"
-            value={placaVeiculo}
-            onChange={handleAlterarPlacaVeiculo}
-            autoFocus
-            fullWidth
-          />
-        </DialogContent>
-        <DialogActions>
-          <Button color="default" onClick={handleFecharDialogEstacionamento}>
-            Cancelar
-          </Button>
-          <Button color="default" onClick={() => handleAdicionarEstacionamento(placaVeiculo)}>
-            Adicionar
-          </Button>
-        </DialogActions>
-      </Dialog>
-    );
-  }
+    fetch()
+  }, [handleFinalizarEstacionamento, dialogAberto])
 
   const TabelaEstacionamento = () => {
     return (
@@ -82,7 +36,7 @@ export default function Estacionamento(){
           <TableHead>
             <TableRow>
               <TableCell align="center">
-                <Fab color="primary" aria-label="Add" onClick={handleDialogEstacionamento}>
+                <Fab color="primary" aria-label="Add" onClick={() => setDialogAberto(true)}>
                   <AddIcon />
                 </Fab>
               </TableCell>
@@ -133,7 +87,14 @@ export default function Estacionamento(){
 
   return (
     <React.Fragment>
-      <DialogNovoEstacionamento />
+      {adicionadoSucesso && (
+        <Alert severity="success">Veiculo cadastrado ao estacionamento com sucesso!</Alert>
+      )}
+      <DialogNovoEstacionamento
+        valorDialog={dialogAberto}
+        fecharDialog={() => setDialogAberto(false)} 
+        adicionadoSucesso={() => setAdicionadoSucesso(true)} 
+      />
       <TabelaEstacionamento />
     </React.Fragment>
   );
