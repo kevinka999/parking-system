@@ -44,7 +44,7 @@ export default function DialogAtualizarPreco (props) {
             <DialogTitle id="idDialogTitle">Atualizar Preco</DialogTitle>
             <DialogContent>
             <DialogContentText>
-                Preencha os campos do formulario para atualizar o <strong>preco ID({props.idPreco})</strong>
+                Preencha os campos do formulario para atualizar o preco id <strong>{props.idPreco}</strong>
             </DialogContentText>
             <Grid container spacing={1}>
             <Grid item xs={12}>
