@@ -10,9 +10,10 @@ import AddIcon from '@material-ui/icons/Add';
 
 export default function Estacionamento(){
   const [veiculosEstacionados, setVeiculosEstacionados] = useState([]);
-  const [dialogAberto, setDialogAberto] = useState(false);
+  const [dialogAdicionar, setDialogAdicionar] = useState(false);
   const [updateTable, setUpdateTable] = useState(false);
-  const [adicionadoSucesso, setAdicionadoSucesso] = useState(false);
+  const [alertSucesso, setAlertSucesso] = useState(false);
+  const [mensagemAlertSucesso, setMensagemAlertSucesso] = useState("");
 
   const handleFinalizarEstacionamento = useCallback(async (idEstacionamento) => {
     try{
@@ -31,15 +32,16 @@ export default function Estacionamento(){
     fetch()
   }, [updateTable])
 
-  const handleAbrirAlertaSucesso = () => {
-    setAdicionadoSucesso(true)
-    setTimeout(() => setAdicionadoSucesso(false), 2000)
+  const handleAlertSucesso = (mensagem) => {
+    setAlertSucesso(true)
+    setMensagemAlertSucesso(mensagem)
+    setTimeout(() => setAlertSucesso(false), 2000)
   }
 
-  const AlertAdicionadoSucesso = () => {
+  const AlertSucesso = () => {
     return(
-      <Collapse in={adicionadoSucesso}>
-        <Alert severity="success">Veiculo adicionado ao estacionamento com <strong>sucesso!</strong></Alert>
+      <Collapse in={alertSucesso}>
+        <Alert severity="success">{mensagemAlertSucesso}</Alert>
       </Collapse>
     );
   }
@@ -51,7 +53,7 @@ export default function Estacionamento(){
           <TableHead>
             <TableRow>
               <TableCell align="center">
-                <Fab color="primary" aria-label="Add" onClick={() => setDialogAberto(true)}>
+                <Fab color="primary" aria-label="Add" onClick={() => setDialogAdicionar(true)}>
                   <AddIcon />
                 </Fab>
               </TableCell>
@@ -102,14 +104,14 @@ export default function Estacionamento(){
 
   return (
     <React.Fragment>
-      <AlertAdicionadoSucesso/>
+      <AlertSucesso/>
       <DialogNovoEstacionamento
-        valorDialog={dialogAberto}
+        valorDialog={dialogAdicionar}
         fecharDialog={() => {
-          setDialogAberto(false)
+          setDialogAdicionar(false)
           setUpdateTable(!updateTable)
         }}
-        adicionadoSucesso={handleAbrirAlertaSucesso}
+        alertSucesso={() => handleAlertSucesso('Veiculo adicionado ao estacionamento com sucesso!')}
       />
       <TabelaEstacionamento />
     </React.Fragment>

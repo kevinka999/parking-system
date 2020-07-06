@@ -21,12 +21,14 @@ namespace Estacionamento.API.Controllers
             _precoBO = precoBO;
         }
 
+        [HttpGet]
         [Route("Index")]
         public async Task<List<PrecoModel>> Index()
         {
             return await _precoBO.BuscarPrecos();
         }
 
+        [HttpPost]
         [Route("Adicionar")]
         public async Task Adicionar(PrecoDTO precoRequest)
         {
@@ -40,6 +42,7 @@ namespace Estacionamento.API.Controllers
             await _precoBO.InserirPreco(preco);
         }
 
+        [HttpPost]
         [Route("Atualizar")]
         public async Task Atualizar(PrecoDTO precoRequest)
         {
@@ -54,6 +57,7 @@ namespace Estacionamento.API.Controllers
             await _precoBO.AtualizarPreco(preco);
         }
 
+        [HttpPost]
         [Route("Excluir")]
         public async Task Excluir(PrecoDTO precoRequest)
         {
