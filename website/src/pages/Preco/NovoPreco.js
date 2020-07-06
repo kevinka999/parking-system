@@ -35,7 +35,7 @@ export default function DialogNovoPreco (props) {
     <Dialog open={props.valorDialog} onClose={props.fecharDialog} aria-labelledby="idDialogTitle">
       <DialogTitle id="idDialogTitle">Adicionar Preco</DialogTitle>
       <DialogContent>
-        <DialogContentText>Preencha os campos do formulario para cadastrar um novo <strong>preco</strong></DialogContentText>
+        <DialogContentText>Preencha os campos do formulario para cadastrar</DialogContentText>
           <Grid container spacing={1}>
             <Grid item xs={12}>
               <TextField 

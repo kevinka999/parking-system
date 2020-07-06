@@ -1,5 +1,6 @@
 import React, {useState, useCallback} from 'react';
 import api from '../../services/api';
+import InputMask from "react-input-mask";
 import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Button, TextField, Grid} from '@material-ui/core';
 
 const DialogNovoEstacionamento = (props) => {
@@ -21,18 +22,23 @@ const DialogNovoEstacionamento = (props) => {
     <Dialog open={props.valorDialog} onClose={props.fecharDialog} aria-labelledby="idDialogTitle">
       <DialogTitle id="idDialogTitle">Adicionar Estacionamento</DialogTitle>
       <DialogContent>
-        <DialogContentText>Preencha os campos do formulario para cadastrar um novo <strong>estacionamento</strong></DialogContentText>
+        <DialogContentText>Preencha os campos do formulario para cadastrar</DialogContentText>
         <Grid container spacing={1}>
           <Grid item xs={12}>
-            <TextField 
-              variant="outlined" 
-              label="Placa Veiculo"
-              margin="dense"
+            <InputMask
+              mask="aaaa-9999"
               value={placaVeiculo}
               onChange={(e) => setPlacaVeiculo(e.target.value)}
-              autoFocus
-              fullWidth
-            />
+              disabled={false}
+              maskChar=" "
+            >
+              <TextField 
+                variant="outlined" 
+                label="Placa Veiculo"
+                margin="dense"
+                fullWidth
+              />
+            </InputMask>
           </Grid>
         </Grid>
       </DialogContent>
