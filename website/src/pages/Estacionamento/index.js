@@ -3,23 +3,25 @@ import DialogNovoEstacionamento from './NovoEstacionamento';
 import api from '../../services/api';
 
 import {format} from 'date-fns';
-import Alert from '@material-ui/lab/Alert';
-import {TableContainer, Table, TableHead, TableBody, TableCell, TableRow, Paper, Button, Fab} from '@material-ui/core';
+import {Alert} from '@material-ui/lab';
+import {TableContainer, Table, TableHead, TableBody, TableCell, TableRow, Paper, Button, Fab, Collapse} from '@material-ui/core';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import AddIcon from '@material-ui/icons/Add';
 
 export default function Estacionamento(){
   const [veiculosEstacionados, setVeiculosEstacionados] = useState([]);
   const [dialogAberto, setDialogAberto] = useState(false);
+  const [updateTable, setUpdateTable] = useState(false);
   const [adicionadoSucesso, setAdicionadoSucesso] = useState(false);
 
   const handleFinalizarEstacionamento = useCallback(async (idEstacionamento) => {
     try{
       await api.post('/Estacionamento/Encerrar/', {idEstacionamento});
+      setUpdateTable(!updateTable)
     } catch(error) {
         alert("Houve um problema ao finalizar!");
     }
-  }, []) 
+  }, [updateTable]);
 
   useEffect(() => {
     async function fetch() {
@@ -27,7 +29,20 @@ export default function Estacionamento(){
     }
 
     fetch()
-  }, [handleFinalizarEstacionamento, dialogAberto])
+  }, [updateTable])
+
+  const handleAbrirAlertaSucesso = () => {
+    setAdicionadoSucesso(true)
+    setTimeout(() => setAdicionadoSucesso(false), 2000)
+  }
+
+  const AlertAdicionadoSucesso = () => {
+    return(
+      <Collapse in={adicionadoSucesso}>
+        <Alert severity="success">Veiculo adicionado ao estacionamento com <strong>sucesso!</strong></Alert>
+      </Collapse>
+    );
+  }
 
   const TabelaEstacionamento = () => {
     return (
@@ -87,13 +102,14 @@ export default function Estacionamento(){
 
   return (
     <React.Fragment>
-      {adicionadoSucesso && (
-        <Alert severity="success">Veiculo cadastrado ao estacionamento com sucesso!</Alert>
-      )}
+      <AlertAdicionadoSucesso/>
       <DialogNovoEstacionamento
         valorDialog={dialogAberto}
-        fecharDialog={() => setDialogAberto(false)} 
-        adicionadoSucesso={() => setAdicionadoSucesso(true)} 
+        fecharDialog={() => {
+          setDialogAberto(false)
+          setUpdateTable(!updateTable)
+        }}
+        adicionadoSucesso={handleAbrirAlertaSucesso}
       />
       <TabelaEstacionamento />
     </React.Fragment>

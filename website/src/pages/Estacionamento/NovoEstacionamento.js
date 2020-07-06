@@ -1,24 +1,21 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 import api from '../../services/api';
 import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Button, TextField} from '@material-ui/core';
 
 const DialogNovoEstacionamento = (props) => {
     const [placaVeiculo, setPlacaVeiculo] = useState("");
 
-    const handleAdicionarEstacionamento = (placaAdicionar) => {
-      async function fetch(placaAdicionar) {
+    const handleAdicionarEstacionamento = useCallback(async (placaAdicionar) => {
         try {
           await api.post('/Estacionamento/Adicionar/', {'placaVeiculo': placaAdicionar}).then(() => {
-            props.adicionadoSucesso();
-            props.fecharDialog();
+            props.adicionadoSucesso()
+            props.fecharDialog()
+            setPlacaVeiculo("")
           });
         } catch(error) {
           alert("Houve um problema ao adicionar!");
         }
-      }
-      
-      fetch(placaAdicionar)
-    }
+      }, [props]);
 
     return (
       <Dialog open={props.valorDialog} onClose={props.fecharDialog} aria-labelledby="idDialogTitle">
