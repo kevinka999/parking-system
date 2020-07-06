@@ -47,6 +47,11 @@ namespace Estacionamento.BO
             return precoAtivo;
         }
 
+        public async Task<PrecoModel> BuscarPrecoById(int idPreco)
+        {
+            return await _precoRepository.GetPreco(idPreco);
+        }
+
         public async Task<List<PrecoModel>> BuscarPrecos()
         {
             return await _precoRepository.GetAllPrecos();

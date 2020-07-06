@@ -1,8 +1,3 @@
-C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.csprojAssemblyReference.cache
-C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.AssemblyInfoInputs.cache
-C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.AssemblyInfo.cs
-C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.csproj.CoreCompileInputs.cache
-C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.MvcApplicationPartsAssemblyInfo.cache
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.csprojAssemblyReference.cache
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\staticwebassets\Estacionamento.API.StaticWebAssets.Manifest.cache
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\staticwebassets\Estacionamento.API.StaticWebAssets.xml
@@ -93,6 +88,11 @@ C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\
 C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\bin\Debug\netcoreapp3.1\Estacionamento.DAO.dll
 C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\bin\Debug\netcoreapp3.1\Estacionamento.BO.pdb
 C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\bin\Debug\netcoreapp3.1\Estacionamento.DAO.pdb
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.csprojAssemblyReference.cache
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.AssemblyInfo.cs
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.RazorTargetAssemblyInfo.cache
 C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\Estacionamento.API.csproj.CopyComplete
 C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.API\obj\Debug\netcoreapp3.1\staticwebassets\Estacionamento.API.StaticWebAssets.Manifest.cache

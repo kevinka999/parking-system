@@ -28,6 +28,21 @@ namespace Estacionamento.API.Controllers
             return await _precoBO.BuscarPrecos();
         }
 
+        [HttpGet]
+        [Route("BuscarAtivo")]
+        public async Task<PrecoModel> BuscarPrecoAtivo()
+        {
+            DateTime dataBuscar = DateTime.Now;
+            return await _precoBO.BuscarPrecoAtivo(dataBuscar);
+        }
+
+        [HttpPost]
+        [Route("Buscar")]
+        public async Task<PrecoModel> BuscarPreco(PrecoDTO precoRequest)
+        {
+            return await _precoBO.BuscarPrecoById(precoRequest.idPreco);
+        }
+
         [HttpPost]
         [Route("Adicionar")]
         public async Task Adicionar(PrecoDTO precoRequest)

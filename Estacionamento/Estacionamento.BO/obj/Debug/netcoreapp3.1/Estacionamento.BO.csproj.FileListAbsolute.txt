@@ -1,7 +1,3 @@
-C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.csprojAssemblyReference.cache
-C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.AssemblyInfoInputs.cache
-C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.AssemblyInfo.cs
-C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.csproj.CoreCompileInputs.cache
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.csprojAssemblyReference.cache
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.AssemblyInfoInputs.cache
 G:\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.AssemblyInfo.cs
@@ -18,6 +14,10 @@ C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\b
 C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\bin\Debug\netcoreapp3.1\Estacionamento.BO.pdb
 C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\bin\Debug\netcoreapp3.1\Estacionamento.DAO.dll
 C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\bin\Debug\netcoreapp3.1\Estacionamento.DAO.pdb
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.csprojAssemblyReference.cache
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.AssemblyInfo.cs
+C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.csproj.CoreCompileInputs.cache
 C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.csproj.CopyComplete
 C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.dll
 C:\Users\Kevin\Documents\Kevin\Estacionamento\Estacionamento\Estacionamento.BO\obj\Debug\netcoreapp3.1\Estacionamento.BO.pdb

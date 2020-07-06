@@ -12,6 +12,7 @@ namespace Estacionamento.BO.Interfaces
         Task AtualizarPreco(PrecoModel preco);
         Task ExcluirPreco(int idPreco);
         Task<PrecoModel> BuscarPrecoAtivo(DateTime dataBuscar);
+        Task<PrecoModel> BuscarPrecoById(int idPreco);
         Task<List<PrecoModel>> BuscarPrecos();
     }
 }

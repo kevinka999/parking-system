@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import DialogNovoPreco from './NovoPreco';
+import DialogAtualizarPreco from './AtualizarPreco';
+import DialogDeletarPreco from './DeletarPreco';
 import api from '../../services/api';
 
 import {format} from 'date-fns';
@@ -12,12 +14,17 @@ import AddIcon from '@material-ui/icons/Add';
 export default function Preco(){
   const [precosEstacionamento, setPrecosEstacionamento] = useState([])
   const [updateTable, setUpdateTable] = useState(false);
+
   const [dialogAdicionar, setDialogAdicionar] = useState(false)
+
   const [dialogEditar, setDialogEditar] = useState(false)
+  const [idPrecoEditar, setIdPrecoEditar] = useState(0)
+
+  const [dialogDeletar, setDialogDeletar] = useState(false)
+  const [idPrecoDeletar, setIdPrecoDeletar] = useState(0)
+
   const [alertSucesso, setAlertSucesso] = useState(false)
   const [mensagemAlertSucesso, setMensagemAlertSucesso] = useState("")
-
-  const handleExcluirPreco = () => {}
 
   useEffect(() => {
     async function fetch(){
@@ -30,7 +37,7 @@ export default function Preco(){
   const handleAlertSucesso = (mensagem) => {
     setAlertSucesso(true)
     setMensagemAlertSucesso(mensagem)
-    setTimeout(() => setAlertSucesso(false), 2000)
+    setTimeout(() => setAlertSucesso(false), 3000)
   }
 
   const AlertAdicionadoSucesso = () => {
@@ -67,8 +74,18 @@ export default function Preco(){
               <TableCell align="center">{format(new Date(preco.dataFinal), 'dd/MM/yyyy HH:mm')}</TableCell>
               <TableCell align="center">
                 <ButtonGroup disableElevation variant="contained" color="primary">
-                  <Button onClick={() => setDialogEditar(true)}><CreateIcon/></Button>
-                  <Button onClick={() => handleExcluirPreco()}><DeleteIcon/></Button>
+                  <Button onClick={() => {
+                    setIdPrecoEditar(preco.id)
+                    setDialogEditar(true)
+                  }}>
+                    <CreateIcon/>
+                  </Button>
+                  <Button onClick={() => {
+                    setIdPrecoDeletar(preco.id)
+                    setDialogDeletar(true)
+                  }}>
+                    <DeleteIcon/>
+                  </Button>
                 </ButtonGroup>
               </TableCell>
             </TableRow>
@@ -90,6 +107,30 @@ export default function Preco(){
           setUpdateTable(!updateTable)
         }}
       />
+      {idPrecoEditar !== 0 && (
+        <DialogAtualizarPreco
+          idPreco={idPrecoEditar}
+          valorDialog={dialogEditar}
+          alertSucesso={() => handleAlertSucesso("Preco do estacionamento atualizado com sucesso!")} 
+          fecharDialog={() => {
+            setDialogEditar(false)
+            setIdPrecoEditar(0)
+            setUpdateTable(!updateTable)
+          }}
+        />
+      )}
+      {idPrecoDeletar !== 0 && (
+        <DialogDeletarPreco
+          idPreco={idPrecoDeletar}
+          valorDialog={dialogDeletar}
+          alertSucesso={() => handleAlertSucesso("Preco do estacionamento excluido com sucesso!")} 
+          fecharDialog={() => {
+            setDialogDeletar(false)
+            setIdPrecoDeletar(0)
+            setUpdateTable(!updateTable)
+          }}
+        />
+      )}
     <TabelaPreco/>
   </React.Fragment>
   )
