@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {Link, useLocation} from 'react-router-dom';
 
 import ImagemMenu from '../../assets/imagemMenu.png';
 import './style.css';
@@ -11,7 +11,12 @@ import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 
 
 export default function NavMenu() {
-  const [valorPagina, setValorPagina] = useState("/Estacionamento");
+  const [valorPagina, setValorPagina] = useState("");
+  const location = useLocation();
+
+  useEffect(() => {
+      setValorPagina(location.pathname)
+  }, [location]);
 
   const ImagemCabecalho = () => {
     return(

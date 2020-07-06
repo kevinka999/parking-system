@@ -40,7 +40,8 @@ namespace Estacionamento.DAO.Repository
 
         public async Task<List<PrecoModel>> GetAllPrecos()
         {
-            return await _context.PrecoModel.ToListAsync();
+            return await _context.PrecoModel.OrderByDescending(x => x.Id)
+                                            .ToListAsync();
         }
 
         public async Task<PrecoModel> GetPreco(int idPreco)

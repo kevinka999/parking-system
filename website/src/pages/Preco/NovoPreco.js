@@ -3,23 +3,24 @@ import api from '../../services/api';
 import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Button, TextField, Grid} from '@material-ui/core';
 
 export default function DialogNovoPreco (props) {
-  const [precoValorInicio, setPrecoValorInicio] = useState(0);
-  const [precoDataInicio, setPrecoDataInicio] = useState(new Date());
+  const [precoValorInicial, setPrecoValorInicial] = useState(0);
+  const [precoDataInicial, setPrecoDataInicial] = useState(new Date());
   const [precoDataFinal, setPrecoDataFinal] = useState(new Date());
   
   const resetarTodosStates = () => {
-      setPrecoValorInicio("");
-      setPrecoDataInicio("");
+      setPrecoValorInicial("");
+      setPrecoDataInicial("");
       setPrecoDataFinal("");
   }
 
-  const handleAdicionarPreco = useCallback(async (precoValorInicio, precoDataInicio, precoDataFim) => {
-    const bodyRequest = {
-        'valorInicial': parseFloat(precoValorInicio),
-        'dataInicial': new Date(precoDataInicio),
-        'dataFinal': new Date(precoDataFim),
-    }
+  const handleAdicionarPreco = useCallback(async (valorInicial, dataInicial, dataFinal) => {
     try {
+      const bodyRequest = {
+          'valorInicial': parseFloat(valorInicial),
+          'dataInicial': new Date(dataInicial),
+          'dataFinal': new Date(dataFinal),
+      }
+
       await api.post('/Preco/Adicionar/', bodyRequest).then(() => {
         props.alertSucesso()
         props.fecharDialog()
@@ -43,8 +44,8 @@ export default function DialogNovoPreco (props) {
                 label="Preco Inicial"
                 type="number"
                 margin="dense"
-                value={precoDataInicio}
-                onChange={(e) => setPrecoDataInicio(e.target.value)}
+                value={precoValorInicial}
+                onChange={(e) => setPrecoValorInicial(e.target.value)}
                 fullWidth
               />
             </Grid>
@@ -54,8 +55,8 @@ export default function DialogNovoPreco (props) {
                 label="Data Valida Inicial"
                 type="datetime-local"
                 margin="dense"
-                value={precoDataFinal}
-                onChange={(e) => setPrecoDataFinal(e.target.value)}
+                value={precoDataInicial}
+                onChange={(e) => setPrecoDataInicial(e.target.value)}
                 InputLabelProps={{
                   shrink: true,
                 }}
@@ -68,8 +69,8 @@ export default function DialogNovoPreco (props) {
                 label="Data Valida Final"
                 type="datetime-local"
                 margin="dense"
-                value={precoValorInicio}
-                onChange={(e) => setPrecoValorInicio(e.target.value)}
+                value={precoDataFinal}
+                onChange={(e) => setPrecoDataFinal(e.target.value)}
                 InputLabelProps={{
                   shrink: true,
                 }}
@@ -83,8 +84,8 @@ export default function DialogNovoPreco (props) {
           Cancelar
         </Button>
         <Button color="default" onClick={() => handleAdicionarPreco(
-            precoValorInicio,
-            precoDataInicio,
+            precoValorInicial,
+            precoDataInicial,
             precoDataFinal
         )}>
           Adicionar
