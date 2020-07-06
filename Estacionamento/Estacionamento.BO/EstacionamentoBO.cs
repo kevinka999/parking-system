@@ -57,7 +57,7 @@ namespace Estacionamento.BO
             return await _estacionamentoRepository.GetAllEstacionamento();
         }
 
-        private Double CalcularValorPagar(double valorHora, EstacionamentoModel estacionamento)
+        public Double CalcularValorPagar(double valorHora, EstacionamentoModel estacionamento)
         {
             Double valorPagar;
 

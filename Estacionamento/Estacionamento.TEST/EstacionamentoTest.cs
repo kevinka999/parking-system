@@ -59,5 +59,58 @@ namespace Estacionamento.TEST
                                                 x.ValorPagar == 0
                                             ));
         }
+
+        [Fact]
+        public async Task Encerrar_Estacionamento_Corretamente()
+        {
+            int idEstacionamento = 1;
+            DateTime dataAgora = DateTime.Now;
+
+            _estacionamentoRepository.GetEstacionamento(idEstacionamento).Returns(
+                new EstacionamentoModel
+                {
+                    Id = idEstacionamento,
+                    VeiculoId = 1,
+                    PrecoId = 1,
+                    DataEntrada = dataAgora
+                }
+            );
+
+            _precoBO.BuscarPrecoAtivo(Arg.Any<DateTime>()).Returns(
+                new PrecoModel
+                {
+                    Id = 1,
+                    ValorInicial = 10,
+                    DataInicial = dataAgora,
+                    DataFinal = dataAgora.AddDays(1)
+                }
+            );
+
+            await _estacionamentoBO.EncerrarEstacionamento(idEstacionamento);
+
+            await _estacionamentoRepository.Received(1)
+                                        .UpdateEstacionamento(Arg.Is<EstacionamentoModel>(
+                                            x => x.VeiculoId == 1 &&
+                                            x.PrecoId == 1 &&
+                                            x.DataEntrada.Date == dataAgora.Date &&
+                                            x.DataSaida.Date == dataAgora.Date &&
+                                            x.ValorPagar == 5
+                                        ));
+        }
+
+        [Fact]
+        public void Calcular_Valor_A_Pagar_Corretamente()
+        {
+            EstacionamentoModel estacionamento = new EstacionamentoModel
+            {
+                Id = 1,
+                DataEntrada = DateTime.Now,
+                DataSaida = DateTime.Now.AddMinutes(1)
+            };
+
+            Double actionValorResultado = _estacionamentoBO.CalcularValorPagar(10, estacionamento);
+
+            Assert.Equal(5, actionValorResultado);
+        }
     }
 }

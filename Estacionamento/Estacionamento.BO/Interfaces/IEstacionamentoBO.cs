@@ -11,5 +11,6 @@ namespace Estacionamento.BO.Interfaces
         Task InserirEstacionamento(string placaVeiculo);
         Task EncerrarEstacionamento(int idEstacionamento);
         Task<List<EstacionamentoModel>> BuscarEstacionamentos();
+        Double CalcularValorPagar(double valorHora, EstacionamentoModel estacionamento);
     }
 }
