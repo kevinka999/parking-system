@@ -1,0 +1,13 @@
+/.vs
+
+/Estacionamento.API/bin
+/Estacionamento.API/obj
+
+/Estacionamento.BO/bin
+/Estacionamento.BO/obj
+
+/Estacionamento.DAO/bin
+/Estacionamento.DAO/obj
+
+/Estacionamento.TEST/bin
+/Estacionamento.TEST/obj
