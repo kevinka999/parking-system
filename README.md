@@ -2,7 +2,7 @@
 Sistema de gerenciamento de Estacionamento e controle de Preço.
 
 ## Front-end
-Front-end desenvolvido em **ReactJS** com a framework Material-UI.
+Front-end desenvolvido em **ReactJS** com a biblioteca Material-UI.
 ## Back-end
 Aplicação desenvolvida em **.NET Core** *(C#)*.
 ## Testes Automatizados
