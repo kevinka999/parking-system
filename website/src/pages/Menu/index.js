@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {Link, useLocation} from 'react-router-dom';
 
 import ImagemMenu from '../../assets/imagemMenu.png';
@@ -11,12 +11,7 @@ import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 
 
 export default function NavMenu() {
-  const [valorPagina, setValorPagina] = useState("");
-  const location = useLocation();
-
-  useEffect(() => {
-      setValorPagina(location.pathname)
-  }, [location]);
+  let location = useLocation();
 
   const ImagemCabecalho = () => {
     return(
@@ -29,10 +24,7 @@ export default function NavMenu() {
       <ImagemCabecalho />
 
       <BottomNavigation
-        value={valorPagina}
-        onChange={(event, value) => {
-          setValorPagina(value);
-        }}
+        value={location.pathname}
         showLabels
         className="navMenu"
       >
