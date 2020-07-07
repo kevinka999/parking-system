@@ -4,7 +4,7 @@ Sistema de gerenciamento de Estacionamento e controle de Preço.
 ## Front-end
 Front-end desenvolvido em **ReactJS** com a biblioteca Material-UI.
 ## Back-end
-Aplicação desenvolvida em **.NET Core** *(C#)*.
+Aplicação desenvolvida em **.NET Core** *(C#)* utilizando a arquitetura de 3 camadas (3 tier architecture).
 ## Testes Automatizados
 Testes unitários desenvolvido em **XUnit** com **NSubstitute** para *Mock*.
 ## Banco de Dados
